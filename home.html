@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas Modern</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar Modern -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#beranda">Kelas Matematika</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#materi">Materi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tugas">Tugas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diskusi">Diskusi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero bg-gradient text-white text-center py-5">
+        <div class="container">
+            <img src="https://picsum.photos/800/400?random=1" alt="Ilustrasi Kelas" class="img-fluid rounded mb-4 shadow">
+            <h1 class="display-4 fw-bold">Selamat Datang di Kelas Matematika</h1>
+            <p class="lead">Akses materi, tugas, dan diskusi dengan mudah. Responsif di semua perangkat!</p>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <!-- Materi dengan Cards -->
+        <section id="materi" class="mb-5">
+            <h2 class="text-center mb-4">Materi Pembelajaran</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="Bab 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bab 1: Aljabar Dasar</h5>
+                            <p class="card-text">Pelajari konsep dasar aljabar.</p>
+                            <a href="#" class="btn btn-primary">Baca Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/300/200?random=3" class="card-img-top" alt="Bab 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Bab 2: Geometri</h5>
+                            <p class="card-text">Eksplorasi bentuk dan ruang.</p>
+                            <a href="#" class="btn btn-primary">Baca Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Bab 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Bab 3: Statistika</h5>
+                            <p class="card-text">Analisis data dan probabilitas.</p>
+                            <a href="#" class="btn btn-primary">Baca Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tugas -->
+        <section id="tugas" class="mb-5">
+            <h2 class="text-center mb-4">Tugas</h2>
+            <div class="card p-4 shadow-sm">
+                <p>Unggah tugas Anda di sini.</p>
+                <form>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" name="tugas">
+                    </div>
+                    <button type="submit" class="btn btn-success">Kirim Tugas</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Diskusi -->
+        <section id="diskusi" class="mb-5">
+            <h2 class="text-center mb-4">Diskusi</h2>
+            <div class="card p-4 shadow-sm">
+                <p><strong>Pertanyaan:</strong> Bagaimana cara menyelesaikan persamaan kuadrat?</p>
+                <textarea class="form-control mb-3" rows="3" placeholder="Jawab di sini..."></textarea>
+                <button class="btn btn-info">Kirim Jawaban</button>
+            </div>
+        </section>
+
+        <!-- Jadwal -->
+        <section id="jadwal" class="mb-5">
+            <h2 class="text-center mb-4">Jadwal Kelas</h2>
+            <div class="card p-4 shadow-sm text-center">
+                <p class="fs-5">Kelas setiap <strong>Senin dan Rabu pukul 10:00</strong>.</p>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="mb-5">
+            <h2 class="text-center mb-4">Kontak</h2>
+            <div class="card p-4 shadow-sm text-center">
+                <p>Email: <a href="mailto:guru@sekolah.com">guru@sekolah.com</a></p>
+                <p>Telepon: 08123456789</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Website Kelas Modern. Dibuat dengan Grok & Bootstrap.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
