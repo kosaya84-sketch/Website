@@ -61,7 +61,7 @@
             background: var(--glass-white);
             backdrop-filter: blur(15px);
             border: 1px solid var(--border-glow);
-            padding: 40px;
+            padding: 60px 40px 40px 40px; /* tambah ruang atas untuk profile box */
             border-radius: 0 40px 0 40px; /* Bentuk asimetris agar unik */
             max-width: 600px;
             width: 100%;
@@ -80,6 +80,125 @@
             font-weight: bold;
             padding: 2px 10px;
             font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Profiles row: 4 vertical profile cards above menu */
+        .profiles-row {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            margin: 18px 0;
+            flex-wrap: wrap;
+        }
+
+        .profile-card {
+            width: 140px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(0,242,255,0.08);
+            padding: 10px 12px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 6px 18px rgba(0,242,255,0.04);
+            text-align: center;
+            color: #e9f8ff;
+        }
+
+        .profile-card .avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: var(--dark-space);
+            background: linear-gradient(135deg, var(--neon-blue), #66f9ff);
+            box-shadow: 0 0 10px rgba(0,242,255,0.12);
+        }
+
+        .profile-card .name {
+            font-weight: 700;
+            color: var(--neon-blue);
+            font-size: 0.95rem;
+        }
+
+        .profile-card .role {
+            font-size: 0.75rem;
+            color: #bfefff;
+            opacity: 0.9;
+            margin-top: -2px;
+        }
+
+        @media (max-width: 480px) {
+            .profiles-row {
+                gap: 10px;
+            }
+            .profile-card {
+                width: 100px;
+                padding: 8px;
+            }
+            .profile-card .avatar {
+                width: 48px;
+                height: 48px;
+            }
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Partners section - logos */
+        .partners-section {
+            width: 100%;
+            max-width: 720px;
+            margin: 10px auto 24px;
+            text-align: center;
+        }
+
+        .partners-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partner-box {
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(0,242,255,0.06);
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,242,255,0.03);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .partner-box img {
+            max-width: 100%;
+            max-height: 48px;
+            display: block;
+            filter: brightness(0) invert(1);
+        }
+
+        .partner-box:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,242,255,0.08);
         }
 
         h1 {
@@ -162,11 +281,55 @@
         </div>
 
         <div class="main-card">
+
             <span class="status-tag">EST. 2024</span>
             <h1>Unit 26 Project</h1>
             <p class="description">
                 Mentransformasi ide digital menjadi realitas futuristik. Kami bukan sekadar komunitas, tapi ekosistem kreatif yang menjunjung tinggi inovasi dan koneksi tanpa batas.
             </p>
+        </div>
+
+        <div class="profiles-row">
+            <div class="profile-card">
+                <div class="avatar initials" role="img" aria-label="Avatar: Fenha">F</div>
+                <div class="profile-info">
+                    <div class="name">Fenha</div>
+                    <div class="role">Founder</div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="avatar initials" role="img" aria-label="Avatar: Kinzy">K</div>
+                <div class="profile-info">
+                    <div class="name">Kinzy</div>
+                    <div class="role">Owner</div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="avatar initials" role="img" aria-label="Avatar: Near">N</div>
+                <div class="profile-info">
+                    <div class="name">Near</div>
+                    <div class="role">Admin</div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="avatar initials" role="img" aria-label="Avatar:4VshiY6 ">4</div>
+                <div class="profile-info">
+                    <div class="name">4VshiY6</div>
+                    <div class="role">Admin</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-section">
+            <h2>Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-box"><img src="partner1.png" alt="Partner 1"></div>
+                <div class="partner-box"><img src="partner2.png" alt="Partner 2"></div>
+                <div class="partner-box"><img src="partner3.png" alt="Partner 3"></div>
+            </div>
         </div>
 
         <div class="action-grid">
