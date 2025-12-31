@@ -3,212 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Héaven | Official Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Inu 26 | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #080a12;
             --neon-blue: #00f2ff;
-            --neon-purple: #7000ff;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --dark-space: #06070a;
+            --glass-white: rgba(255, 255, 255, 0.05);
+            --border-glow: rgba(0, 242, 255, 0.3);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background-color: var(--bg-body);
+            background-color: var(--dark-space);
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(112, 0, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 40%);
-            color: #ffffff;
-            min-height: 100vh;
+                linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px; /* Efek grid futuristik */
+        }
+
+        /* Layout Container */
+        .wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 60px 20px;
+            min-height: 100vh;
         }
 
-        /* Navbar */
-        nav {
-            width: 100%;
-            padding: 25px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .brand {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            background: linear-gradient(to right, #fff, var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links a {
-            color: #888;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--neon-blue);
-        }
-
-        /* Hero Section */
-        .profile-card {
-            margin-top: 50px;
+        /* Logo Area */
+        .brand-section {
             text-align: center;
-            padding: 20px;
-            max-width: 500px;
+            margin-bottom: 40px;
         }
 
-        .avatar-wrapper {
-            position: relative;
-            width: 130px;
-            height: 130px;
-            margin: 0 auto 25px;
+        .main-logo {
+            width: 180px; /* Sesuaikan ukuran logo Inu 26 */
+            filter: drop-shadow(0 0 15px var(--neon-blue));
+            animation: pulse 3s infinite alternate;
         }
 
-        .avatar-img {
+        @keyframes pulse {
+            from { transform: scale(1); filter: drop-shadow(0 0 10px var(--neon-blue)); }
+            to { transform: scale(1.05); filter: drop-shadow(0 0 25px var(--neon-blue)); }
+        }
+
+        /* Kartu Info Utama */
+        .main-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border-glow);
+            padding: 40px;
+            border-radius: 0 40px 0 40px; /* Bentuk asimetris agar unik */
+            max-width: 600px;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Bentuk unik bukan bulat sempurna */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            font-weight: 800;
-            box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
-            animation: morph 6s ease-in-out infinite;
+            position: relative;
+            box-shadow: 10px 10px 0px var(--neon-blue); /* Bayangan solid gaya tech */
         }
 
-        @keyframes morph {
-            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+        .main-card::before {
+            content: "SYSTEM ACTIVE";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--neon-blue);
+            color: var(--dark-space);
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 10px;
+            font-family: 'Orbitron', sans-serif;
         }
 
-        .badge-owner {
-            background: rgba(112, 0, 255, 0.2);
-            border: 1px solid var(--neon-purple);
-            color: #d1b3ff;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.75rem;
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+        }
+
+        .status-tag {
             display: inline-block;
-            margin-top: 15px;
-            font-weight: 600;
+            padding: 5px 15px;
+            border: 1px solid #fff;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
 
-        /* Bio Box */
-        .bio-box {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 24px;
-            margin-top: 40px;
-            text-align: left;
+        .description {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #ccd6f6;
+        }
+
+        /* Button Grid */
+        .action-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .action-btn {
+            background: transparent;
+            border: 1px solid var(--border-glow);
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .action-btn:hover {
+            background: var(--neon-blue);
+            color: var(--dark-space);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        /* Footer Decoration */
+        .footer-lines {
+            margin-top: 50px;
+            width: 100px;
+            height: 2px;
+            background: var(--neon-blue);
             position: relative;
         }
 
-        .bio-box h2 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .bio-box h2::before {
+        .footer-lines::after {
             content: '';
-            width: 4px;
-            height: 20px;
+            position: absolute;
+            top: 5px;
+            left: 25px;
+            width: 50px;
+            height: 2px;
             background: var(--neon-blue);
-            border-radius: 10px;
-            display: inline-block;
-        }
-
-        .bio-box p {
-            color: #aaa;
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        .highlight {
-            color: var(--neon-blue);
-            font-weight: 600;
-        }
-
-        /* Floating Button */
-        .fab {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #ff8a00, #ffc100);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 20px rgba(255, 138, 0, 0.3);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .fab:hover {
-            transform: scale(1.1) rotate(15deg);
         }
 
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="brand">Héaven.</div>
-        <div class="nav-links">
-            <a href="#">Tentang</a>
-            <a href="#">Admin</a>
-            <a href="#">Partner</a>
+    <div class="wrapper">
+        <div class="brand-section">
+            <img src="logo.png" alt="Inu 26 Logo" class="main-logo">
         </div>
-    </nav>
 
-    <div class="profile-card">
-        <div class="avatar-wrapper">
-            <div class="avatar-img">M</div>
-        </div>
-        
-        <h1>Héaven Room</h1>
-        <div class="badge-owner">Founder: Nafvy</div>
-        
-        <div class="bio-box">
-            <h2>Tentang Kami</h2>
-            <p>
-                <span class="highlight">Héaven</span> bukanlah sekadar marga, melainkan rumah bagi para pencari solidaritas. 
-                Didirikan pada <span class="highlight">16 April 2024</span>, kami mengedepankan nilai persaudaraan tanpa batas di dunia digital.
-                Bergabunglah dan jadilah bagian dari ekosistem yang suportif dan kekeluargaan.
+        <div class="main-card">
+            <span class="status-tag">EST. 2024</span>
+            <h1>Inu 26 Project</h1>
+            <p class="description">
+                Mentransformasi ide digital menjadi realitas futuristik. Kami bukan sekadar komunitas, tapi ekosistem kreatif yang menjunjung tinggi inovasi dan koneksi tanpa batas.
             </p>
         </div>
-    </div>
 
-    <div class="fab">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
-        </svg>
+        <div class="action-grid">
+            <a href="#" class="action-btn">Database</a>
+            <a href="#" class="action-btn">Network</a>
+            <a href="#" class="action-btn">Admin Portal</a>
+            <a href="#" class="action-btn">Contact</a>
+        </div>
+
+        <div class="footer-lines"></div>
     </div>
 
 </body>
